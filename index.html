@@ -1,0 +1,522 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CodeDecode - Professional IT Solutions & Technical Support</title>
+    <style>
+        /* Base Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: #f8fafc;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Header & Navigation */
+        header {
+            background: #fff;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 0;
+        }
+
+        .logo {
+            font-size: 1.8rem;
+            font-weight: bold;
+            color: #2563eb;
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: #333;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: #2563eb;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 150px 0 100px;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+
+        .hero p {
+            font-size: 1.3rem;
+            margin-bottom: 2rem;
+            opacity: 0.9;
+        }
+
+        .btn {
+            display: inline-block;
+            background: #2563eb;
+            color: white;
+            padding: 12px 30px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: background 0.3s;
+        }
+
+        .btn:hover {
+            background: #1d4ed8;
+        }
+
+        /* IT Services Section */
+        .it-services {
+            padding: 100px 0;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        .section-title h2 {
+            font-size: 2.5rem;
+            color: #1e293b;
+        }
+
+        .service-category {
+            background: white;
+            padding: 2.5rem;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            margin-bottom: 2rem;
+        }
+
+        .category-title {
+            color: #2563eb;
+            font-size: 1.5rem;
+            margin-bottom: 1.5rem;
+            border-bottom: 2px solid #e2e8f0;
+            padding-bottom: 0.5rem;
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .service-item {
+            background: #f8fafc;
+            padding: 1.5rem;
+            border-radius: 8px;
+            border-left: 4px solid #2563eb;
+        }
+
+        .service-item h4 {
+            color: #1e293b;
+            margin-bottom: 0.5rem;
+        }
+
+        .service-item p {
+            color: #64748b;
+            font-size: 0.9rem;
+        }
+
+        /* Support Levels */
+        .support-levels {
+            padding: 80px 0;
+            background: white;
+        }
+
+        .levels-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .level-card {
+            background: #f8fafc;
+            padding: 2rem;
+            border-radius: 10px;
+            text-align: center;
+            border-top: 4px solid #2563eb;
+        }
+
+        .level-card h3 {
+            color: #1e293b;
+            margin-bottom: 1rem;
+        }
+
+        /* Courier Services */
+        .courier-services {
+            padding: 80px 0;
+            background: #f1f5f9;
+        }
+
+        .courier-card {
+            background: white;
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            text-align: center;
+        }
+
+        /* Contact Section */
+        .contact {
+            padding: 100px 0;
+            background: white;
+        }
+
+        .contact-form {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: 500;
+        }
+
+        .form-group input,
+        .form-group select,
+        .form-group textarea {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-size: 1rem;
+        }
+
+        /* Footer */
+        footer {
+            background: #1e293b;
+            color: white;
+            padding: 3rem 0;
+            text-align: center;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+
+            .hero h1 {
+                font-size: 2.2rem;
+            }
+
+            .service-category {
+                padding: 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <nav>
+                <div class="logo">CodeDecode</div>
+                <ul class="nav-links">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#it-services">IT Services</a></li>
+                    <li><a href="#support">Support Levels</a></li>
+                    <li><a href="#courier">Courier Services</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="container">
+            <h1>Professional IT Solutions & Technical Support</h1>
+            <p>Comprehensive technology services for businesses - From development to infrastructure support</p>
+            <a href="#contact" class="btn">Get IT Support</a>
+        </div>
+    </section>
+
+    <!-- IT Services Section -->
+    <section class="it-services" id="it-services">
+        <div class="container">
+            <div class="section-title">
+                <h2>Comprehensive IT Services</h2>
+                <p>End-to-end technology solutions for your business</p>
+            </div>
+
+            <!-- Development Services -->
+            <div class="service-category">
+                <h3 class="category-title">Application & Web Development</h3>
+                <div class="services-grid">
+                    <div class="service-item">
+                        <h4>Web Application Development</h4>
+                        <p>Custom web apps using modern frameworks and technologies</p>
+                    </div>
+                    <div class="service-item">
+                        <h4>Business Website Development</h4>
+                        <p>Professional corporate websites and e-commerce platforms</p>
+                    </div>
+                    <div class="service-item">
+                        <h4>Mobile Application Development</h4>
+                        <p>iOS and Android apps for business solutions</p>
+                    </div>
+                    <div class="service-item">
+                        <h4>API Development & Integration</h4>
+                        <p>RESTful APIs and third-party system integrations</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Technical Support Services -->
+            <div class="service-category">
+                <h3 class="category-title">Technical Support & Infrastructure</h3>
+                <div class="services-grid">
+                    <div class="service-item">
+                        <h4>HCL System Support</h4>
+                        <p>Specialized support for HCL infrastructure and applications</p>
+                    </div>
+                    <div class="service-item">
+                        <h4>Enterprise System Administration</h4>
+                        <p>Server management, network administration, and system monitoring</p>
+                    </div>
+                    <div class="service-item">
+                        <h4>Cloud Services Management</h4>
+                        <p>AWS, Azure, and Google Cloud platform management</p>
+                    </div>
+                    <div class="service-item">
+                        <h4>IT Infrastructure Support</h4>
+                        <p>End-to-end infrastructure management and optimization</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Hardware & End-User Services -->
+            <div class="service-category">
+                <h3 class="category-title">Hardware & End-User Support</h3>
+                <div class="services-grid">
+                    <div class="service-item">
+                        <h4>Computer Repair & Maintenance</h4>
+                        <p>Hardware diagnostics, repairs, and preventive maintenance</p>
+                    </div>
+                    <div class="service-item">
+                        <h4>Operating System Installation</h4>
+                        <p>Windows, Linux, and macOS installation and configuration</p>
+                    </div>
+                    <div class="service-item">
+                        <h4>Hardware Upgrades & Optimization</h4>
+                        <p>Component upgrades and system performance tuning</p>
+                    </div>
+                    <div class="service-item">
+                        <h4>Peripheral Device Support</h4>
+                        <p>Printers, scanners, and other peripheral setup and troubleshooting</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Consulting Services -->
+            <div class="service-category">
+                <h3 class="category-title">IT Consulting & Strategy</h3>
+                <div class="services-grid">
+                    <div class="service-item">
+                        <h4>Technology Infrastructure Planning</h4>
+                        <p>Strategic IT infrastructure design and implementation</p>
+                    </div>
+                    <div class="service-item">
+                        <h4>Digital Transformation Consulting</h4>
+                        <p>Guiding businesses through technology modernization</p>
+                    </div>
+                    <div class="service-item">
+                        <h4>Security Assessment & Planning</h4>
+                        <p>Cybersecurity evaluation and protection strategy</p>
+                    </div>
+                    <div class="service-item">
+                        <h4>IT Process Optimization</h4>
+                        <p>Workflow analysis and technology process improvement</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Support Levels Section -->
+    <section class="support-levels" id="support">
+        <div class="container">
+            <div class="section-title">
+                <h2>Technical Support Levels</h2>
+                <p>Comprehensive support structure for all your IT needs</p>
+            </div>
+            <div class="levels-grid">
+                <div class="level-card">
+                    <h3>1st Level Support</h3>
+                    <p>Initial contact point for all IT issues</p>
+                    <ul style="text-align: left; margin-top: 1rem;">
+                        <li>Basic troubleshooting</li>
+                        <li>Incident logging & classification</li>
+                        <li>Password resets</li>
+                        <li>How-to guidance</li>
+                        <li>Ticket routing</li>
+                    </ul>
+                </div>
+                <div class="level-card">
+                    <h3>2nd Level Support</h3>
+                    <p>Technical expertise for complex issues</p>
+                    <ul style="text-align: left; margin-top: 1rem;">
+                        <li>Advanced troubleshooting</li>
+                        <li>Application support</li>
+                        <li>System configuration</li>
+                        <li>Network issues</li>
+                        <li>Hardware diagnostics</li>
+                    </ul>
+                </div>
+                <div class="level-card">
+                    <h3>3rd Level Support</h3>
+                    <p>Expert consultation and strategic solutions</p>
+                    <ul style="text-align: left; margin-top: 1rem;">
+                        <li>Expert consultation</li>
+                        <li>System architecture</li>
+                        <li>Strategic planning</li>
+                        <li>Infrastructure design</li>
+                        <li>Technology roadmap</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Courier Services Section -->
+    <section class="courier-services" id="courier">
+        <div class="container">
+            <div class="section-title">
+                <h2>Courier & Logistics Services</h2>
+                <p>Reliable delivery solutions to complement your business operations</p>
+            </div>
+            <div class="courier-card">
+                <h3>Professional Courier Services</h3>
+                <p style="margin: 1rem 0;">Fast and reliable delivery solutions for documents, packages, and equipment</p>
+                <ul style="text-align: left; display: inline-block;">
+                    <li>Same-day document delivery</li>
+                    <li>Equipment transport and logistics</li>
+                    <li>Business package delivery</li>
+                    <li>Nationwide coverage across Sweden</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact" id="contact">
+        <div class="container">
+            <div class="section-title">
+                <h2>Contact Us</h2>
+                <p>Ready to enhance your IT infrastructure? Get in touch today.</p>
+            </div>
+            <div class="contact-form">
+                <form id="contactForm">
+                    <div class="form-group">
+                        <label for="name">Name</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="company">Company</label>
+                        <input type="text" id="company" name="company">
+                    </div>
+                    <div class="form-group">
+                        <label for="service">Primary Service Needed</label>
+                        <select id="service" name="service" required>
+                            <option value="">Select a service</option>
+                            <option value="development">Application & Web Development</option>
+                            <option value="support">Technical Support</option>
+                            <option value="consulting">IT Consulting</option>
+                            <option value="hardware">Hardware Support</option>
+                            <option value="courier">Courier Services</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Project Details or Requirements</label>
+                        <textarea id="message" name="message" rows="5" required></textarea>
+                    </div>
+                    <button type="submit" class="btn">Request IT Consultation</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 CodeDecode. All rights reserved.</p>
+            <p>IT Support: support@codedecode.nu | Consulting: consulting@codedecode.nu | Courier: logistics@codedecode.nu</p>
+        </div>
+    </footer>
+
+    <script>
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        // Simple form handling
+        document.getElementById('contactForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('Thank you for your inquiry! Our IT specialists will contact you within 24 hours.');
+            this.reset();
+        });
+
+        // Add scroll effect to header
+        window.addEventListener('scroll', function() {
+            const header = document.querySelector('header');
+            if (window.scrollY > 100) {
+                header.style.background = 'rgba(255, 255, 255, 0.95)';
+            } else {
+                header.style.background = '#fff';
+            }
+        });
+    </script>
+</body>
+</html>
