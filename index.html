@@ -1,4 +1,54 @@
 <!doctype html>
+<div class="badges">
+<span class="badge">On‑site & remote support</span>
+<span class="badge">Windows • macOS • O365 • AD</span>
+<span class="badge">Small dev tasks & fixes</span>
+<span class="badge">Courier & light logistics</span>
+</div>
+<div class="cta">
+<a class="btn btn-primary" href="#contact">Get support</a>
+<a class="btn" href="#services">See what we do</a>
+</div>
+</div>
+<div class="card" style="padding:20px">
+<h3 style="margin-top:0">Quick facts</h3>
+<ul style="margin:0 0 0 18px;color:var(--muted)">
+<li>Response in plain language, no jargon.</li>
+<li>Hands‑on help with laptops, accounts, and apps.</li>
+<li>Small development tasks when you need a fix.</li>
+<li>Optional courier runs for equipment and paperwork.</li>
+</ul>
+</div>
+</section>
+
+
+<section id="services" class="section">
+<h2>Services</h2>
+<div class="grid services">
+<div class="card service">
+<h3>IT Consultation & Support</h3>
+<p>Simple, steady help for your daily IT. New laptop? New user? Something broken? We sort it. We support Windows and macOS, Microsoft 365, basic networking, printers, and common office apps.</p>
+<ul style="margin:10px 0 0 18px;color:var(--muted)">
+<li>Install & troubleshoot laptops, printers, and peripherals</li>
+<li>Account setup in Azure AD / Active Directory</li>
+<li>Microsoft 365, email, and basic Wi‑Fi/VPN fixes</li>
+<li>Ticket handling with clear updates to users</li>
+</ul>
+</div>
+<div class="card service">
+<h3>Development (small & practical)</h3>
+<p>Need a script, a small feature, or an integration? We handle compact jobs that remove daily friction — without a big consulting project.</p>
+<ul style="margin:10px 0 0 18px;color:var(--muted)">
+<li>Automation scripts and data clean‑ups</li>
+<li>Light web work (HTML/CSS/JS, minor fixes)</li>
+<li>API and SaaS integrations where possible</li>
+</ul>
+</div>
+<div class="card service">
+<h3>Staffing: Developers & Support Techs</h3>
+<p>Short on hands? We can place reliable support technicians or developers for short assignments. We focus on attitude, clear updates, and finishing the task.</p>
+<ul style="margin:10px 0 0 18px;color:var(--muted)">
+<li>Field/desk‑side technicians (L1/L2)</li>
 <li>Junior–mid developers for focused tasks</li>
 <li>Flexible, contract‑friendly terms</li>
 </ul>
@@ -43,50 +93,4 @@
 <div class="small" style="margin:10px 0 12px">By sending this form you agree we may contact you about your request. We keep messages private and don’t share them.</div>
 
 
-<button class="btn btn-primary" type="submit">Send message</button>
-<p id="form-status" class="small" style="margin-top:10px;display:none"></p>
-</form>
-<div class="card" style="padding:18px">
-<h3>Reach us directly</h3>
-<p style="color:var(--muted);margin-top:8px">Email: <a href="mailto:info@codedecode.se">info@codedecode.se</a><br>
-Service area: Sweden (on‑site mainly Gothenburg)</p>
-<p class="small">Prefer email? No problem — we answer within business hours.</p>
-</div>
-</div>
-</section>
-
-
-<footer>
-<div class="wrap" style="padding:0">
-<div style="opacity:.8">© <span id="y"></span> CodeDecode. All rights reserved.</div>
-</div>
-</footer>
-</div>
-
-
-<script>document.getElementById('y').textContent = new Date().getFullYear();</script>
-<script>
-document.getElementById('y').textContent = new Date().getFullYear();
-const form = document.getElementById('contact-form');
-const statusEl = document.getElementById('form-status');
-form.addEventListener('submit', async (e) => {
-e.preventDefault();
-const data = new FormData(form);
-statusEl.style.display = 'block';
-statusEl.textContent = 'Sending…';
-try {
-const res = await fetch(form.action, { method: 'POST', body: data, headers: { 'Accept': 'application/json' } });
-if (res.ok) {
-statusEl.textContent = 'Thanks! We got your message and will reply soon.';
-form.reset();
-} else {
-const json = await res.json().catch(()=>({}));
-statusEl.textContent = json?.error || 'Sorry, we could not send your message right now.';
-}
-} catch (err) {
-statusEl.textContent = 'Network error. Please email us at info@codedecode.se.';
-}
-});
-</script>
-</body>
 </html>
