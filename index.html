@@ -1,96 +1,348 @@
-<!doctype html>
-<div class="badges">
-<span class="badge">On‑site & remote support</span>
-<span class="badge">Windows • macOS • O365 • AD</span>
-<span class="badge">Small dev tasks & fixes</span>
-<span class="badge">Courier & light logistics</span>
-</div>
-<div class="cta">
-<a class="btn btn-primary" href="#contact">Get support</a>
-<a class="btn" href="#services">See what we do</a>
-</div>
-</div>
-<div class="card" style="padding:20px">
-<h3 style="margin-top:0">Quick facts</h3>
-<ul style="margin:0 0 0 18px;color:var(--muted)">
-<li>Response in plain language, no jargon.</li>
-<li>Hands‑on help with laptops, accounts, and apps.</li>
-<li>Small development tasks when you need a fix.</li>
-<li>Optional courier runs for equipment and paperwork.</li>
-</ul>
-</div>
-</section>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CodeDecode - IT Solutions & Technical Support</title>
+    <style>
+        /* Base Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+        }
 
-<section id="services" class="section">
-<h2>Services</h2>
-<div class="grid services">
-<div class="card service">
-<h3>IT Consultation & Support</h3>
-<p>Simple, steady help for your daily IT. New laptop? New user? Something broken? We sort it. We support Windows and macOS, Microsoft 365, basic networking, printers, and common office apps.</p>
-<ul style="margin:10px 0 0 18px;color:var(--muted)">
-<li>Install & troubleshoot laptops, printers, and peripherals</li>
-<li>Account setup in Azure AD / Active Directory</li>
-<li>Microsoft 365, email, and basic Wi‑Fi/VPN fixes</li>
-<li>Ticket handling with clear updates to users</li>
-</ul>
-</div>
-<div class="card service">
-<h3>Development (small & practical)</h3>
-<p>Need a script, a small feature, or an integration? We handle compact jobs that remove daily friction — without a big consulting project.</p>
-<ul style="margin:10px 0 0 18px;color:var(--muted)">
-<li>Automation scripts and data clean‑ups</li>
-<li>Light web work (HTML/CSS/JS, minor fixes)</li>
-<li>API and SaaS integrations where possible</li>
-</ul>
-</div>
-<div class="card service">
-<h3>Staffing: Developers & Support Techs</h3>
-<p>Short on hands? We can place reliable support technicians or developers for short assignments. We focus on attitude, clear updates, and finishing the task.</p>
-<ul style="margin:10px 0 0 18px;color:var(--muted)">
-<li>Field/desk‑side technicians (L1/L2)</li>
-<li>Junior–mid developers for focused tasks</li>
-<li>Flexible, contract‑friendly terms</li>
-</ul>
-</div>
-</div>
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
 
+        /* Header & Navigation */
+        header {
+            background: #fff;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+        }
 
-<div class="card service" style="margin-top:18px">
-<h3>Logistics (small scale)</h3>
-<p style="color:var(--muted)">When you need a quick courier run — equipment to a site, a return, or paperwork — we can help. It’s a simple add‑on for customers who want one contact for both IT and small deliveries in the Gothenburg area.</p>
-</div>
-</section>
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 0;
+        }
 
+        .logo {
+            font-size: 1.8rem;
+            font-weight: bold;
+            color: #2563eb;
+        }
 
-<section id="about" class="section">
-<h2>About CodeDecode</h2>
-<p class="card" style="padding:18px;color:var(--muted)">We’re a small Swedish company that likes tidy systems and happy users. No buzzwords, no heavy processes — just clear work and steady follow‑up. Most of our assignments are hands‑on IT with a bit of development on the side. When needed, we also help with small courier jobs so your day keeps moving.</p>
-</section>
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+        }
 
+        .nav-links a {
+            text-decoration: none;
+            color: #333;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
 
-<section id="contact" class="section">
-<h2>Contact</h2>
-<div class="contact">
-<form class="card" style="padding:18px" id="contact-form" method="POST" action="https://formspree.io/f/REPLACE_FORM_ID">
-<input type="hidden" name="_subject" value="New message from codedecode.se" />
-<label for="name">Your name</label>
-<input id="name" name="name" required>
+        .nav-links a:hover {
+            color: #2563eb;
+        }
 
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 150px 0 100px;
+            text-align: center;
+        }
 
-<label for="email">Email</label>
-<input id="email" name="email" type="email" required>
+        .hero h1 {
+            font-size: 3.5rem;
+            margin-bottom: 1rem;
+        }
 
+        .hero p {
+            font-size: 1.3rem;
+            margin-bottom: 2rem;
+            opacity: 0.9;
+        }
 
-<label for="phone">Phone (optional)</label>
-<input id="phone" name="phone" type="tel" placeholder="+46 …">
+        .btn {
+            display: inline-block;
+            background: #2563eb;
+            color: white;
+            padding: 12px 30px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: background 0.3s;
+        }
 
+        .btn:hover {
+            background: #1d4ed8;
+        }
 
-<label for="message">How can we help?</label>
-<textarea id="message" name="message" required></textarea>
+        /* Services Section */
+        .services {
+            padding: 100px 0;
+            background: #f8fafc;
+        }
 
+        .section-title {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
 
-<div class="small" style="margin:10px 0 12px">By sending this form you agree we may contact you about your request. We keep messages private and don’t share them.</div>
+        .section-title h2 {
+            font-size: 2.5rem;
+            color: #1e293b;
+        }
 
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
 
+        .service-card {
+            background: white;
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            text-align: center;
+            transition: transform 0.3s;
+        }
+
+        .service-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .service-icon {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+
+        /* About Section */
+        .about {
+            padding: 100px 0;
+        }
+
+        .about-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+        }
+
+        /* Contact Section */
+        .contact {
+            padding: 100px 0;
+            background: #f8fafc;
+        }
+
+        .contact-form {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: 500;
+        }
+
+        .form-group input,
+        .form-group textarea {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-size: 1rem;
+        }
+
+        /* Footer */
+        footer {
+            background: #1e293b;
+            color: white;
+            padding: 3rem 0;
+            text-align: center;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+
+            .about-content {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <nav>
+                <div class="logo">CodeDecode</div>
+                <ul class="nav-links">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="container">
+            <h1>Expert IT Solutions & Technical Support</h1>
+            <p>Professional technical support, system administration, and IT consulting services in Sweden</p>
+            <a href="#contact" class="btn">Get Started</a>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="services" id="services">
+        <div class="container">
+            <div class="section-title">
+                <h2>Our Services</h2>
+            </div>
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon">🛠️</div>
+                    <h3>Technical Support</h3>
+                    <p>24/7 technical support for HCL systems, hardware, and software solutions across Sweden</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">💻</div>
+                    <h3>System Administration</h3>
+                    <p>Professional system administration and maintenance services for businesses of all sizes</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">🔧</div>
+                    <h3>IT Consulting</h3>
+                    <p>Strategic IT consulting to optimize your technology infrastructure and operations</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about" id="about">
+        <div class="container">
+            <div class="about-content">
+                <div>
+                    <h2>About CodeDecode</h2>
+                    <p>Based in Sweden, CodeDecode specializes in providing top-tier technical support and IT solutions to businesses across the country. With extensive experience in HCL systems and enterprise IT environments, we deliver reliable, professional services tailored to your needs.</p>
+                    <p>Our team of certified professionals is committed to ensuring your systems run smoothly and efficiently.</p>
+                </div>
+                <div>
+                    <h3>Why Choose Us?</h3>
+                    <ul>
+                        <li>✅ Swedish company with local expertise</li>
+                        <li>✅ HCL system specialists</li>
+                        <li>✅ 24/7 support availability</li>
+                        <li>✅ Competitive pricing</li>
+                        <li>✅ Fast response times</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact" id="contact">
+        <div class="container">
+            <div class="section-title">
+                <h2>Contact Us</h2>
+            </div>
+            <div class="contact-form">
+                <form id="contactForm">
+                    <div class="form-group">
+                        <label for="name">Name</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="company">Company</label>
+                        <input type="text" id="company" name="company">
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Message</label>
+                        <textarea id="message" name="message" rows="5" required></textarea>
+                    </div>
+                    <button type="submit" class="btn">Send Message</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 CodeDecode. All rights reserved.</p>
+            <p>Your trusted IT partner in Sweden</p>
+        </div>
+    </footer>
+
+    <script>
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        // Simple form handling
+        document.getElementById('contactForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('Thank you for your message! We will contact you soon.');
+            this.reset();
+        });
+
+        // Add scroll effect to header
+        window.addEventListener('scroll', function() {
+            const header = document.querySelector('header');
+            if (window.scrollY > 100) {
+                header.style.background = 'rgba(255, 255, 255, 0.95)';
+            } else {
+                header.style.background = '#fff';
+            }
+        });
+    </script>
+</body>
 </html>
