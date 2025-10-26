@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CodeDecode - IT Solutions & Technical Support</title>
+    <title>CodeDecode - Professional IT Solutions & Technical Support</title>
     <style>
         /* Base Styles */
         * {
@@ -16,6 +16,7 @@
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             line-height: 1.6;
             color: #333;
+            background: #f8fafc;
         }
 
         .container {
@@ -73,7 +74,7 @@
         }
 
         .hero h1 {
-            font-size: 3.5rem;
+            font-size: 3rem;
             margin-bottom: 1rem;
         }
 
@@ -98,10 +99,9 @@
             background: #1d4ed8;
         }
 
-        /* Services Section */
-        .services {
+        /* IT Services Section */
+        .it-services {
             padding: 100px 0;
-            background: #f8fafc;
         }
 
         .section-title {
@@ -114,46 +114,74 @@
             color: #1e293b;
         }
 
+        .service-category {
+            background: white;
+            padding: 2.5rem;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            margin-bottom: 2rem;
+        }
+
+        .category-title {
+            color: #2563eb;
+            font-size: 1.5rem;
+            margin-bottom: 1.5rem;
+            border-bottom: 2px solid #e2e8f0;
+            padding-bottom: 0.5rem;
+        }
+
         .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .service-item {
+            background: #f8fafc;
+            padding: 1.5rem;
+            border-radius: 8px;
+            border-left: 4px solid #2563eb;
+        }
+
+        .service-item h4 {
+            color: #1e293b;
+            margin-bottom: 0.5rem;
+        }
+
+        .service-item p {
+            color: #64748b;
+            font-size: 0.9rem;
+        }
+
+        /* Support Levels */
+        .support-levels {
+            padding: 80px 0;
+            background: white;
+        }
+
+        .levels-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
             gap: 2rem;
         }
 
-        .service-card {
-            background: white;
+        .level-card {
+            background: #f8fafc;
             padding: 2rem;
             border-radius: 10px;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
             text-align: center;
-            transition: transform 0.3s;
+            border-top: 4px solid #2563eb;
         }
 
-        .service-card:hover {
-            transform: translateY(-5px);
-        }
-
-        .service-icon {
-            font-size: 3rem;
+        .level-card h3 {
+            color: #1e293b;
             margin-bottom: 1rem;
-        }
-
-        /* About Section */
-        .about {
-            padding: 100px 0;
-        }
-
-        .about-content {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 4rem;
-            align-items: center;
         }
 
         /* Contact Section */
         .contact {
             padding: 100px 0;
-            background: #f8fafc;
+            background: white;
         }
 
         .contact-form {
@@ -172,6 +200,7 @@
         }
 
         .form-group input,
+        .form-group select,
         .form-group textarea {
             width: 100%;
             padding: 12px;
@@ -195,11 +224,11 @@
             }
 
             .hero h1 {
-                font-size: 2.5rem;
+                font-size: 2.2rem;
             }
 
-            .about-content {
-                grid-template-columns: 1fr;
+            .service-category {
+                padding: 1.5rem;
             }
         }
     </style>
@@ -212,8 +241,8 @@
                 <div class="logo">CodeDecode</div>
                 <ul class="nav-links">
                     <li><a href="#home">Home</a></li>
-                    <li><a href="#services">Services</a></li>
-                    <li><a href="#about">About</a></li>
+                    <li><a href="#it-services">IT Services</a></li>
+                    <li><a href="#support">Support Levels</a></li>
                     <li><a href="#contact">Contact</a></li>
                 </ul>
             </nav>
@@ -223,55 +252,130 @@
     <!-- Hero Section -->
     <section class="hero" id="home">
         <div class="container">
-            <h1>Expert IT Solutions & Technical Support</h1>
-            <p>Professional technical support, system administration, and IT consulting services in Sweden</p>
-            <a href="#contact" class="btn">Get Started</a>
+            <h1>Professional IT Solutions & Technical Support</h1>
+            <p>Comprehensive technology services for businesses - From development to infrastructure support</p>
+            <a href="#contact" class="btn">Get IT Support</a>
         </div>
     </section>
 
-    <!-- Services Section -->
-    <section class="services" id="services">
+    <!-- IT Services Section -->
+    <section class="it-services" id="it-services">
         <div class="container">
             <div class="section-title">
-                <h2>Our Services</h2>
+                <h2>Comprehensive IT Services</h2>
+                <p>End-to-end technology solutions for your business</p>
             </div>
-            <div class="services-grid">
-                <div class="service-card">
-                    <div class="service-icon">🛠️</div>
-                    <h3>Technical Support</h3>
-                    <p>24/7 technical support for HCL systems, hardware, and software solutions across Sweden</p>
+
+            <!-- Development Services -->
+            <div class="service-category">
+                <h3 class="category-title">Application & Web Development</h3>
+                <div class="services-grid">
+                    <div class="service-item">
+                        <h4>Web Application Development</h4>
+                        <p>Custom web apps using modern frameworks and technologies</p>
+                    </div>
+                    <div class="service-item">
+                        <h4>Business Website Development</h4>
+                        <p>Professional corporate websites and e-commerce platforms</p>
+                    </div>
+                    <div class="service-item">
+                        <h4>Mobile Application Development</h4>
+                        <p>iOS and Android apps for business solutions</p>
+                    </div>
+                    <div class="service-item">
+                        <h4>API Development & Integration</h4>
+                        <p>RESTful APIs and third-party system integrations</p>
+                    </div>
                 </div>
-                <div class="service-card">
-                    <div class="service-icon">💻</div>
-                    <h3>System Administration</h3>
-                    <p>Professional system administration and maintenance services for businesses of all sizes</p>
+            </div>
+
+            <!-- Technical Support Services -->
+            <div class="service-category">
+                <h3 class="category-title">Technical Support & Infrastructure</h3>
+                <div class="services-grid">
+                    <div class="service-item">
+                        <h4>HCL System Support</h4>
+                        <p>Specialized support for HCL infrastructure and applications</p>
+                    </div>
+                    <div class="service-item">
+                        <h4>Enterprise System Administration</h4>
+                        <p>Server management, network administration, and system monitoring</p>
+                    </div>
+                    <div class="service-item">
+                        <h4>Cloud Services Management</h4>
+                        <p>AWS, Azure, and Google Cloud platform management</p>
+                    </div>
+                    <div class="service-item">
+                        <h4>IT Infrastructure Support</h4>
+                        <p>End-to-end infrastructure management and optimization</p>
+                    </div>
                 </div>
-                <div class="service-card">
-                    <div class="service-icon">🔧</div>
-                    <h3>IT Consulting</h3>
-                    <p>Strategic IT consulting to optimize your technology infrastructure and operations</p>
+            </div>
+
+            <!-- Hardware & End-User Services -->
+            <div class="service-category">
+                <h3 class="category-title">Hardware & End-User Support</h3>
+                <div class="services-grid">
+                    <div class="service-item">
+                        <h4>Computer Repair & Maintenance</h4>
+                        <p>Hardware diagnostics, repairs, and preventive maintenance</p>
+                    </div>
+                    <div class="service-item">
+                        <h4>Operating System Installation</h4>
+                        <p>Windows, Linux, and macOS installation and configuration</p>
+                    </div>
+                    <div class="service-item">
+                        <h4>Hardware Upgrades & Optimization</h4>
+                        <p>Component upgrades and system performance tuning</p>
+                    </div>
+                    <div class="service-item">
+                        <h4>Peripheral Device Support</h4>
+                        <p>Printers, scanners, and other peripheral setup and troubleshooting</p>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- About Section -->
-    <section class="about" id="about">
+    <!-- Support Levels Section -->
+    <section class="support-levels" id="support">
         <div class="container">
-            <div class="about-content">
-                <div>
-                    <h2>About CodeDecode</h2>
-                    <p>Based in Sweden, CodeDecode specializes in providing top-tier technical support and IT solutions to businesses across the country. With extensive experience in HCL systems and enterprise IT environments, we deliver reliable, professional services tailored to your needs.</p>
-                    <p>Our team of certified professionals is committed to ensuring your systems run smoothly and efficiently.</p>
+            <div class="section-title">
+                <h2>Technical Support Levels</h2>
+                <p>Comprehensive support structure for all your IT needs</p>
+            </div>
+            <div class="levels-grid">
+                <div class="level-card">
+                    <h3>1st Level Support</h3>
+                    <p>Initial contact point for all IT issues</p>
+                    <ul style="text-align: left; margin-top: 1rem;">
+                        <li>Basic troubleshooting</li>
+                        <li>Incident logging & classification</li>
+                        <li>Password resets</li>
+                        <li>How-to guidance</li>
+                        <li>Ticket routing</li>
+                    </ul>
                 </div>
-                <div>
-                    <h3>Why Choose Us?</h3>
-                    <ul>
-                        <li>✅ Swedish company with local expertise</li>
-                        <li>✅ HCL system specialists</li>
-                        <li>✅ 24/7 support availability</li>
-                        <li>✅ Competitive pricing</li>
-                        <li>✅ Fast response times</li>
+                <div class="level-card">
+                    <h3>2nd Level Support</h3>
+                    <p>Technical expertise for complex issues</p>
+                    <ul style="text-align: left; margin-top: 1rem;">
+                        <li>Advanced troubleshooting</li>
+                        <li>Application support</li>
+                        <li>System configuration</li>
+                        <li>Network issues</li>
+                        <li>Hardware diagnostics</li>
+                    </ul>
+                </div>
+                <div class="level-card">
+                    <h3>3rd Level Support</h3>
+                    <p>Expert consultation and strategic solutions</p>
+                    <ul style="text-align: left; margin-top: 1rem;">
+                        <li>Expert consultation</li>
+                        <li>System architecture</li>
+                        <li>Strategic planning</li>
+                        <li>Infrastructure design</li>
+                        <li>Technology roadmap</li>
                     </ul>
                 </div>
             </div>
@@ -283,9 +387,16 @@
         <div class="container">
             <div class="section-title">
                 <h2>Contact Us</h2>
+                <p>Ready to enhance your IT infrastructure? Get in touch today.</p>
             </div>
             <div class="contact-form">
-                <form id="contactForm">
+                <form id="contactForm" action="https://formsubmit.co/info@codedecode.se" method="POST">
+                    <!-- FormSubmit Configuration -->
+                    <input type="hidden" name="_subject" value="New Contact Form Submission - CodeDecode">
+                    <input type="hidden" name="_template" value="table">
+                    <input type="hidden" name="_captcha" value="false">
+                    <input type="hidden" name="_next" value="https://codedecode.nu/thank-you.html">
+                    
                     <div class="form-group">
                         <label for="name">Name</label>
                         <input type="text" id="name" name="name" required>
@@ -299,10 +410,20 @@
                         <input type="text" id="company" name="company">
                     </div>
                     <div class="form-group">
-                        <label for="message">Message</label>
+                        <label for="service">Primary Service Needed</label>
+                        <select id="service" name="service" required>
+                            <option value="">Select a service</option>
+                            <option value="development">Application & Web Development</option>
+                            <option value="support">Technical Support</option>
+                            <option value="consulting">IT Consulting</option>
+                            <option value="hardware">Hardware Support</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Project Details or Requirements</label>
                         <textarea id="message" name="message" rows="5" required></textarea>
                     </div>
-                    <button type="submit" class="btn">Send Message</button>
+                    <button type="submit" class="btn">Request IT Consultation</button>
                 </form>
             </div>
         </div>
@@ -312,7 +433,7 @@
     <footer>
         <div class="container">
             <p>&copy; 2024 CodeDecode. All rights reserved.</p>
-            <p>Your trusted IT partner in Sweden</p>
+            <p>Email: info@codedecode.se | Website: codedecode.nu</p>
         </div>
     </footer>
 
@@ -327,11 +448,10 @@
             });
         });
 
-        // Simple form handling
+        // Form submission handling
         document.getElementById('contactForm').addEventListener('submit', function(e) {
-            e.preventDefault();
-            alert('Thank you for your message! We will contact you soon.');
-            this.reset();
+            // FormSubmit will handle the actual submission
+            alert('Thank you for your inquiry! We will contact you within 24 hours.');
         });
 
         // Add scroll effect to header
