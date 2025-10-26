@@ -3,8 +3,8 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>CodeDecode — Practical IT, with a calm touch</title>
-  <meta name="description" content="CodeDecode helps Swedish teams with steady IT support, small development tasks, and—when needed—simple local logistics. Clear updates, tidy handovers, no jargon." />
+  <title>CodeDecode — IT Services & Logistics</title>
+  <meta name="description" content="CodeDecode provides reliable IT support, small development tasks, and local logistics in Sweden." />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Manrope:wght@600;800&display=swap" rel="stylesheet">
@@ -14,193 +14,84 @@
       --accent:#7ae0ff;--accent2:#6ef2c1;--shadow:0 20px 60px rgba(0,0,0,.45);
     }
     *{box-sizing:border-box}
-    html,body{height:100%}
-    body{margin:0;background:radial-gradient(1200px 600px at 20% -10%,#15244d 0%,rgba(21,36,77,0) 60%),
-                     radial-gradient(900px 500px at 110% 10%,#123149 0%,rgba(18,49,73,0) 60%),
-                     linear-gradient(180deg,var(--bg),var(--bg2));
-         color:var(--text);font-family:Inter,system-ui,Segoe UI,Roboto,Helvetica,Arial,sans-serif;}
+    body{margin:0;background:linear-gradient(180deg,var(--bg),var(--bg2));color:var(--text);font-family:Inter,system-ui,sans-serif;}
     a{color:var(--accent);text-decoration:none}
     a:hover{text-decoration:underline}
-
     .wrap{max-width:1100px;margin:0 auto;padding:24px}
-    .top{display:flex;align-items:center;justify-content:space-between;padding:10px 0}
-    .brand{display:flex;align-items:center;gap:12px}
-    .logo{width:36px;height:36px;border-radius:10px;background:linear-gradient(135deg,var(--accent),var(--accent2));
-          display:grid;place-items:center;box-shadow:var(--shadow)}
-    .logo svg{width:20px;height:20px}
-    .brand-name{font-family:Manrope,Inter,system-ui,sans-serif;font-weight:800;letter-spacing:.2px}
-    nav a{color:#dfe7ff;margin:0 12px}
-    .menu{display:none}
-
-    .hero{display:grid;grid-template-columns:1.1fr .9fr;gap:28px;align-items:center;padding:38px 0 18px}
-    h1{font-family:Manrope,Inter,sans-serif;font-weight:800;line-height:1.05;font-size:44px;margin:8px 0 14px}
-    .lead{color:var(--muted);margin:0 0 18px}
-    .pill{display:inline-flex;gap:8px;align-items:center;padding:8px 12px;border-radius:999px;border:1px solid var(--line);
-          background:linear-gradient(135deg,rgba(255,255,255,.06),rgba(255,255,255,.03));font-size:13px;color:#cfe6ff}
-    .cta{display:flex;gap:12px;margin-top:14px}
-    .btn{display:inline-block;padding:12px 16px;border-radius:12px;border:1px solid var(--line);background:rgba(255,255,255,.04)}
-    .btn-primary{background:linear-gradient(135deg,var(--accent),var(--accent2));color:#04202b;border:none}
-
-    .card{background:rgba(255,255,255,.04);border:1px solid var(--line);border-radius:18px;box-shadow:var(--shadow)}
-
-    .stats{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:10px}
-    .stat{padding:16px 18px}
-    .stat h3{margin:0;font-size:26px}
-    .muted{color:var(--muted)}
-
-    .section{padding:36px 0}
-
-    .services{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
-    .service{padding:20px}
-    .service h3{margin:0 0 8px}
-    .service p{margin:0;color:var(--muted)}
-    .service ul{margin:10px 0 0 18px;color:var(--muted)}
-
-    .why{display:grid;grid-template-columns:1fr 1fr;gap:18px}
-    .why .item{padding:18px}
-
-    .contact{display:grid;grid-template-columns:1fr 1fr;gap:18px}
-    .contact .panel{padding:20px}
-
-    footer{padding:24px 0;color:#c7d3f5}
-
-    @media (max-width: 980px){
-      .hero{grid-template-columns:1fr}
-      .services{grid-template-columns:1fr}
-      .why{grid-template-columns:1fr}
-      .contact{grid-template-columns:1fr}
-      .menu{display:inline-flex}
-      nav{display:none}
-    }
+    header{display:flex;align-items:center;justify-content:space-between;padding:10px 0}
+    .logo{font-family:Manrope,sans-serif;font-weight:800;font-size:20px}
+    nav a{margin:0 12px;color:#dfe7ff}
+    .hero{padding:60px 0;text-align:center}
+    .hero h1{font-family:Manrope,sans-serif;font-size:40px;margin-bottom:10px}
+    .hero p{color:var(--muted);max-width:700px;margin:0 auto 20px}
+    .btn{display:inline-block;padding:12px 18px;border-radius:10px;border:none;background:linear-gradient(135deg,var(--accent),var(--accent2));color:#051622;cursor:pointer}
+    .section{padding:50px 0}
+    h2{text-align:center;margin-bottom:24px;font-family:Manrope,sans-serif}
+    .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:18px}
+    .card{background:rgba(255,255,255,.04);border:1px solid var(--line);border-radius:16px;box-shadow:var(--shadow);padding:20px}
+    .card h3{margin-top:0}
+    .card p{color:var(--muted)}
+    footer{text-align:center;padding:24px 0;color:#b7c3e8}
   </style>
 </head>
 <body>
   <div class="wrap">
-    <header class="top">
-      <div class="brand">
-        <div class="logo" aria-hidden="true">
-          <svg viewBox="0 0 24 24" fill="none" stroke="#061421" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-            <path d="M4 8a6 6 0 1 1 0 8"/><path d="M20 8a6 6 0 1 0 0 8"/>
-          </svg>
-        </div>
-        <div class="brand-name">CodeDecode</div>
-      </div>
+    <header>
+      <div class="logo">CodeDecode</div>
       <nav>
         <a href="#services">Services</a>
-        <a href="#why">Why us</a>
+        <a href="#about">About</a>
         <a href="#contact">Contact</a>
       </nav>
-      <button class="menu btn" onclick="document.querySelector('nav').style.display = document.querySelector('nav').style.display==='block'?'none':'block'">Menu</button>
     </header>
 
     <section class="hero">
-      <div>
-        <span class="pill">Calm, dependable IT — Sweden</span>
-        <h1>Practical IT help with small development on the side</h1>
-        <p class="lead">We keep laptops and accounts in order, fix the everyday snags, and build small pieces of software that remove friction. If you need a quick courier run for equipment or paperwork, we can help with that too.</p>
-        <div class="cta">
-          <a class="btn btn-primary" href="#contact">Get support</a>
-          <a class="btn" href="#services">See services</a>
-        </div>
-        <div class="stats">
-          <div class="card stat"><h3>Same‑day</h3><div class="muted">ticket updates</div></div>
-          <div class="card stat"><h3>Hands‑on</h3><div class="muted">on‑site & remote</div></div>
-          <div class="card stat"><h3>No jargon</h3><div class="muted">clear handovers</div></div>
-        </div>
-      </div>
-      <div class="card" style="padding:20px">
-        <h3 style="margin:0 0 8px">What we actually do</h3>
-        <ul class="muted" style="margin:0 0 0 18px">
-          <li>Set up laptops, printers, accounts (M365/Azure AD/AD)</li>
-          <li>Fix Wi‑Fi/VPN, email and common office apps</li>
-          <li>Small dev: scripts, web tweaks, simple integrations</li>
-          <li>Optional courier runs in Gothenburg area</li>
-        </ul>
-      </div>
+      <h1>Reliable IT and Logistics Support</h1>
+      <p>We help companies manage everyday IT tasks, small development needs, and simple deliveries. Clear communication, quick response, and dependable service.</p>
+      <a class="btn" href="#contact">Contact Us</a>
     </section>
 
     <section id="services" class="section">
-      <h2>Services</h2>
-      <div class="services">
-        <div class="card service">
-          <h3>IT Consultation & Support</h3>
-          <p>Steady help for day‑to‑day IT. New user? Broken laptop? We sort it and keep people informed.</p>
-          <ul>
-            <li>Windows & macOS, Microsoft 365, basic networking</li>
-            <li>On‑site desk‑side help and remote support</li>
-            <li>Ticket handling with clear updates</li>
-          </ul>
+      <h2>Our Services</h2>
+      <div class="grid">
+        <div class="card">
+          <h3>IT Support</h3>
+          <p>Setup, troubleshooting, and maintenance for laptops, networks, and office systems.</p>
         </div>
-        <div class="card service">
-          <h3>Development (small & useful)</h3>
-          <p>We build the tiny things that save time: scripts, light web fixes, and glue between tools.</p>
-          <ul>
-            <li>Automation scripts and data clean‑ups</li>
-            <li>Small HTML/CSS/JS changes</li>
-            <li>Simple API/SaaS integrations</li>
-          </ul>
+        <div class="card">
+          <h3>Development</h3>
+          <p>Small coding and automation tasks to improve workflows and save time.</p>
         </div>
-        <div class="card service">
-          <h3>Staffing: Devs & Support Techs</h3>
-          <p>Need an extra pair of hands? We can place reliable field techs or junior–mid developers.</p>
-          <ul>
-            <li>Level 1/2 support technicians</li>
-            <li>Focused developer assignments</li>
-            <li>Flexible, contract‑friendly terms</li>
-          </ul>
+        <div class="card">
+          <h3>Staffing</h3>
+          <p>Skilled technicians and developers for short or long-term assignments.</p>
         </div>
-      </div>
-      <div class="card" style="margin-top:18px;padding:20px">
-        <h3>Logistics (small scale)</h3>
-        <p class="muted">Simple courier runs for equipment and paperwork in the Gothenburg area. It’s an add‑on for customers who prefer one contact for both IT and small deliveries.</p>
+        <div class="card">
+          <h3>Logistics</h3>
+          <p>Local courier and equipment transport within the Gothenburg area.</p>
+        </div>
       </div>
     </section>
 
-    <section id="why" class="section">
-      <h2>Why choose CodeDecode</h2>
-      <div class="why">
-        <div class="card item">
-          <h3>Calm and clear</h3>
-          <p class="muted">We explain what’s happening, what we’ll do next, and when it’s done. No buzzwords.</p>
-        </div>
-        <div class="card item">
-          <h3>Practical scope</h3>
-          <p class="muted">Most of our work is hands‑on support with small development tasks that remove daily friction.</p>
-        </div>
-        <div class="card item">
-          <h3>On‑site when needed</h3>
-          <p class="muted">We’re happy to show up. Gothenburg area for on‑site; remote across Sweden.</p>
-        </div>
-        <div class="card item">
-          <h3>Flexible terms</h3>
-          <p class="muted">Short assignments, simple pricing, tidy handovers. We aim for steady relationships.</p>
-        </div>
+    <section id="about" class="section">
+      <h2>About Us</h2>
+      <div class="card" style="max-width:700px;margin:0 auto;text-align:center">
+        <p>CodeDecode is a Swedish company focused on practical IT solutions. We aim to keep systems simple, stable, and efficient so you can focus on your business.</p>
       </div>
     </section>
 
     <section id="contact" class="section">
       <h2>Contact</h2>
-      <div class="contact">
-        <div class="card panel">
-          <h3 style="margin-top:0">Let’s talk</h3>
-          <p class="muted">We’re setting up a form next. For now, email works fine:</p>
-          <p><a class="btn btn-primary" href="mailto:info@codedecode.se">Email info@codedecode.se</a></p>
-          <p class="muted">Service area: Sweden (on‑site mainly Gothenburg)</p>
-        </div>
-        <div class="card panel">
-          <h3 style="margin-top:0">Company</h3>
-          <p class="muted">CodeDecode — IT support, small development, and light logistics.
-            We keep things tidy and predictable so your team can focus on work.</p>
-        </div>
+      <div class="card" style="max-width:700px;margin:0 auto;text-align:center">
+        <p>Email: <a href="mailto:info@codedecode.se">info@codedecode.se</a></p>
+        <p>Based in Gothenburg, Sweden</p>
       </div>
     </section>
 
     <footer>
-      <div class="wrap" style="padding:0">
-        <div style="opacity:.8">© <span id="y"></span> CodeDecode. All rights reserved.</div>
-      </div>
+      © <span id="y"></span> CodeDecode. All rights reserved.
     </footer>
   </div>
-  <script>document.getElementById('y').textContent=new Date().getFullYear();</script>
+  <script>document.getElementById('y').textContent = new Date().getFullYear();</script>
 </body>
 </html>
