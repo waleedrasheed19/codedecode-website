@@ -82,9 +82,26 @@
 
     <section id="contact" class="section">
       <h2>Contact</h2>
-      <div class="card" style="max-width:700px;margin:0 auto;text-align:center">
-        <p>Email: <a href="mailto:info@codedecode.se">info@codedecode.se</a></p>
-        <p>Based in Gothenburg, Sweden</p>
+      <div class="card" style="max-width:720px;margin:0 auto">
+        <form id="contact-form" method="POST" action="https://formspree.io/f/REPLACE_FORM_ID" style="display:grid;grid-template-columns:1fr 1fr;gap:14px">
+          <div style="grid-column:1 / -1;color:var(--muted)">Send a note and we’ll get back soon.</div>
+          <label for="name">Name</label>
+          <input id="name" name="name" required>
+
+          <label for="email">Email</label>
+          <input id="email" name="email" type="email" required>
+
+          <label for="message" style="grid-column:1 / -1">Message</label>
+          <textarea id="message" name="message" required style="min-height:120px"></textarea>
+
+          <input type="text" name="company" style="display:none" tabindex="-1" autocomplete="off"> <!-- honeypot -->
+
+          <input type="hidden" name="_subject" value="Website contact (codedecode.se)">
+          <input type="hidden" name="_replyto" value="info@codedecode.se">
+
+          <button class="btn" type="submit" style="grid-column:1 / -1;justify-self:start">Send</button>
+          <p id="form-status" class="muted" style="grid-column:1 / -1;margin:6px 0 0;display:none"></p>
+        </form>
       </div>
     </section>
 
@@ -93,5 +110,32 @@
     </footer>
   </div>
   <script>document.getElementById('y').textContent = new Date().getFullYear();</script>
+  <script>
+    // year
+    document.getElementById('y').textContent = new Date().getFullYear();
+    // contact form
+    const form = document.getElementById('contact-form');
+    const statusEl = document.getElementById('form-status');
+    if (form) {
+      form.addEventListener('submit', async (e) => {
+        e.preventDefault();
+        statusEl.style.display = 'block';
+        statusEl.textContent = 'Sending…';
+        const data = new FormData(form);
+        try {
+          const res = await fetch(form.action, { method: 'POST', body: data, headers: { 'Accept': 'application/json' } });
+          if (res.ok) {
+            statusEl.textContent = 'Thanks. We received your message.';
+            form.reset();
+          } else {
+            const json = await res.json().catch(()=>({}));
+            statusEl.textContent = json?.error || 'Could not send. Please email info@codedecode.se.';
+          }
+        } catch (err) {
+          statusEl.textContent = 'Network error. Please email info@codedecode.se.';
+        }
+      });
+    }
+  </script>
 </body>
 </html>
