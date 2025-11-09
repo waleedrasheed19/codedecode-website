@@ -1,141 +1,116 @@
-<!doctype html>
-<html lang="en">
-<head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>CodeDecode — IT Services & Logistics</title>
-  <meta name="description" content="CodeDecode provides reliable IT support, small development tasks, and local logistics in Sweden." />
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Manrope:wght@600;800&display=swap" rel="stylesheet">
-  <style>
-    :root{
-      --bg:#0a0f1c;--bg2:#0e1730;--card:#0f1a36;--text:#eaf0ff;--muted:#b6c0dc;--line:rgba(255,255,255,.08);
-      --accent:#7ae0ff;--accent2:#6ef2c1;--shadow:0 20px 60px rgba(0,0,0,.45);
-    }
-    *{box-sizing:border-box}
-    body{margin:0;background:linear-gradient(180deg,var(--bg),var(--bg2));color:var(--text);font-family:Inter,system-ui,sans-serif;}
-    a{color:var(--accent);text-decoration:none}
-    a:hover{text-decoration:underline}
-    .wrap{max-width:1100px;margin:0 auto;padding:24px}
-    header{display:flex;align-items:center;justify-content:space-between;padding:10px 0}
-    .logo{font-family:Manrope,sans-serif;font-weight:800;font-size:20px}
-    nav a{margin:0 12px;color:#dfe7ff}
-    .hero{padding:60px 0;text-align:center}
-    .hero h1{font-family:Manrope,sans-serif;font-size:40px;margin-bottom:10px}
-    .hero p{color:var(--muted);max-width:700px;margin:0 auto 20px}
-    .btn{display:inline-block;padding:12px 18px;border-radius:10px;border:none;background:linear-gradient(135deg,var(--accent),var(--accent2));color:#051622;cursor:pointer}
-    .section{padding:50px 0}
-    h2{text-align:center;margin-bottom:24px;font-family:Manrope,sans-serif}
-    .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:18px}
-    .card{background:rgba(255,255,255,.04);border:1px solid var(--line);border-radius:16px;box-shadow:var(--shadow);padding:20px}
-    .card h3{margin-top:0}
-    .card p{color:var(--muted)}
-    footer{text-align:center;padding:24px 0;color:#b7c3e8}
-  </style>
-</head>
-<body>
-  <div class="wrap">
-    <header>
-      <div class="logo">CodeDecode</div>
-      <nav>
-        <a href="#services">Services</a>
-        <a href="#about">About</a>
-        <a href="#contact">Contact</a>
-      </nav>
-    </header>
-
-    <section class="hero">
-      <h1>Reliable IT and Logistics Support</h1>
-      <p>We help companies manage everyday IT tasks, small development needs, and simple deliveries. Clear communication, quick response, and dependable service.</p>
-      <a class="btn" href="#contact">Contact Us</a>
-    </section>
-
-    <section id="services" class="section">
-      <h2>Our Services</h2>
-      <div class="grid">
-        <div class="card">
-          <h3>IT Support</h3>
-          <p>Setup, troubleshooting, and maintenance for laptops, networks, and office systems.</p>
-        </div>
-        <div class="card">
-          <h3>Development</h3>
-          <p>Small coding and automation tasks to improve workflows and save time.</p>
-        </div>
-        <div class="card">
-          <h3>Staffing</h3>
-          <p>Skilled technicians and developers for short or long-term assignments.</p>
-        </div>
-        <div class="card">
-          <h3>Logistics</h3>
-          <p>Local courier and equipment transport within the Gothenburg area.</p>
-        </div>
-      </div>
-    </section>
-
-    <section id="about" class="section">
-      <h2>About Us</h2>
-      <div class="card" style="max-width:700px;margin:0 auto;text-align:center">
-        <p>CodeDecode is a Swedish company focused on practical IT solutions. We aim to keep systems simple, stable, and efficient so you can focus on your business.</p>
-      </div>
-    </section>
-
-    <section id="contact" class="section">
-      <h2>Contact</h2>
-      <div class="card" style="max-width:720px;margin:0 auto">
-        <form id="contact-form" method="POST" action="https://formspree.io/f/REPLACE_FORM_ID" style="display:grid;grid-template-columns:1fr 1fr;gap:14px">
-          <div style="grid-column:1 / -1;color:var(--muted)">Send a note and we’ll get back soon.</div>
-          <label for="name">Name</label>
-          <input id="name" name="name" required>
-
-          <label for="email">Email</label>
-          <input id="email" name="email" type="email" required>
-
-          <label for="message" style="grid-column:1 / -1">Message</label>
-          <textarea id="message" name="message" required style="min-height:120px"></textarea>
-
-          <input type="text" name="company" style="display:none" tabindex="-1" autocomplete="off"> <!-- honeypot -->
-
-          <input type="hidden" name="_subject" value="Website contact (codedecode.se)">
-          <input type="hidden" name="_replyto" value="info@codedecode.se">
-
-          <button class="btn" type="submit" style="grid-column:1 / -1;justify-self:start">Send</button>
-          <p id="form-status" class="muted" style="grid-column:1 / -1;margin:6px 0 0;display:none"></p>
-        </form>
-      </div>
-    </section>
-
-    <footer>
-      © <span id="y"></span> CodeDecode. All rights reserved.
-    </footer>
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8"/><meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <title>Codedecode — IT Resourcing & Support in Sweden</title>
+  <meta name="description" content="Codedecode provides vetted IT resources, managed support, software development, and courier staffing in Sweden."/>
+  <link rel="stylesheet" href="assets/styles.css"/>
+</head><body>
+  
+<header class="header">
+  <div class="container nav">
+    <a class="brand" href="index.html"><img src="assets/img/logo.svg" alt="Codedecode logo"/><span>Codedecode</span></a>
+    <div class="lang">
+      <button type="button" data-lang="en" aria-label="Switch to English">EN</button>
+      <button type="button" data-lang="sv" aria-label="Byt till svenska">SV</button>
+      <button class="menu-btn" aria-label="Toggle menu">Menu</button>
+    </div>
+    <nav class="links" aria-label="Primary">
+      <a href="index.html" class="home active">Home</a>
+      <a href="about.html" class="about ">About</a>
+      <a href="blog.html" class="blog ">Blog</a>
+      <a href="contact.html" class="contact ">Contact</a>
+    </nav>
   </div>
-  <script>document.getElementById('y').textContent = new Date().getFullYear();</script>
-  <script>
-    // year
-    document.getElementById('y').textContent = new Date().getFullYear();
-    // contact form
-    const form = document.getElementById('contact-form');
-    const statusEl = document.getElementById('form-status');
-    if (form) {
-      form.addEventListener('submit', async (e) => {
-        e.preventDefault();
-        statusEl.style.display = 'block';
-        statusEl.textContent = 'Sending…';
-        const data = new FormData(form);
-        try {
-          const res = await fetch(form.action, { method: 'POST', body: data, headers: { 'Accept': 'application/json' } });
-          if (res.ok) {
-            statusEl.textContent = 'Thanks. We received your message.';
-            form.reset();
-          } else {
-            const json = await res.json().catch(()=>({}));
-            statusEl.textContent = json?.error || 'Could not send. Please email info@codedecode.se.';
-          }
-        } catch (err) {
-          statusEl.textContent = 'Network error. Please email info@codedecode.se.';
-        }
-      });
-    }
-  </script>
-</body>
-</html>
+</header>
+
+  <main class="container">
+    <section class="hero">
+      <div>
+        <h1 data-i18n="hero_title">Swedish IT Resourcing & Support</h1>
+        <p class="muted" data-i18n="hero_desc">We provide vetted IT resources, managed support, and development services to keep your business moving. We can also supply courier staff on demand.</p>
+        <div class="badges">
+          <span class="badge" data-i18n="badge_sweden">Registered in Sweden</span>
+          <span class="badge" data-i18n="badge_network">Nationwide IT Network</span>
+          <span class="badge" data-i18n="badge_support">On-call Support</span>
+        </div>
+        <div class="cta">
+          <a class="button" href="contact.html" data-i18n="cta_quote">Request Talent</a>
+          <a class="button secondary" href="about.html" data-i18n="cta_learn">What We Do</a>
+        </div>
+      </div>
+      <div><img src="assets/img/hero.svg" alt="IT resourcing & support illustration"/></div>
+    </section>
+
+    <section class="section">
+      <h2 data-i18n="services">Services</h2>
+      <p class="muted" data-i18n="services_sub">Specialists on demand—when and where you need them.</p>
+      <div class="grid grid-3" style="margin-top:10px">
+        <article class="card"><img src="assets/img/svc_resourcing.svg" alt="IT resourcing"/>
+          <div class="body"><h3 data-i18n="svc_resourcing">IT Resourcing & Staffing</h3>
+          <p data-i18n="svc_resourcing_desc">Contractors and teams for helpdesk, deskside, data center, and field engineering. Short or long-term assignments across Sweden.</p></div></article>
+        <article class="card"><img src="assets/img/svc_managed.svg" alt="Managed support"/>
+          <div class="body"><h3 data-i18n="svc_managed">Managed IT & Desktop Support</h3>
+          <p data-i18n="svc_managed_desc">SLAs, incident handling, device lifecycle, and on-site dispatch. Keep downtime low and users happy.</p></div></article>
+        <article class="card"><img src="assets/img/svc_dev.svg" alt="Development"/>
+          <div class="body"><h3 data-i18n="svc_dev">Software Development & Integration</h3>
+          <p data-i18n="svc_dev_desc">Web/mobile apps, APIs, and automations tailored to your operations.</p></div></article>
+        <article class="card"><img src="assets/img/svc_courier_staff.svg" alt="Courier workforce"/>
+          <div class="body"><h3 data-i18n="svc_courier">Courier Workforce (Employees)</h3>
+          <p data-i18n="svc_courier_desc">We can provide drivers and delivery staff for your logistics operations, flexible scheduling and coverage.</p></div></article>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2 data-i18n="clients">Trusted by teams like</h2>
+      <div class="clients">
+        <img src="assets/img/logos/NorthTech.svg" alt="NorthTech logo"/>
+        <img src="assets/img/logos/Skandia IT.svg" alt="Skandia IT logo"/>
+        <img src="assets/img/logos/BlueCargo.svg" alt="BlueCargo logo"/>
+        <img src="assets/img/logos/NordicLabs.svg" alt="NordicLabs logo"/>
+        <img src="assets/img/logos/Datapoint.svg" alt="Datapoint logo"/>
+        <img src="assets/img/logos/RapidRoute.svg" alt="RapidRoute logo"/>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2 data-i18n="why">Why Codedecode</h2>
+      <div class="grid grid-3">
+        <div class="card"><div class="body"><h3 data-i18n="why_1h">Vetted talent</h3><p class="muted" data-i18n="why_1p">We screen for skills, communication, and reliability.</p></div></div>
+        <div class="card"><div class="body"><h3 data-i18n="why_2h">Clear SLAs</h3><p class="muted" data-i18n="why_2p">Response targets and escalation paths you can rely on.</p></div></div>
+        <div class="card"><div class="body"><h3 data-i18n="why_3h">Security‑minded</h3><p class="muted" data-i18n="why_3p">From endpoints to apps—security by default.</p></div></div>
+      </div>
+    </section>
+  </main>
+  
+<footer class="footer">
+  <div class="container">
+    <div class="cols">
+      <div>
+        <div class="brand" style="margin-bottom:6px">
+          <img src="assets/img/logo.svg" alt="Codedecode logo"/><span>Codedecode</span>
+        </div>
+        <p class="small" data-i18n="footer_blurb">Swedish IT resourcing, support, and development. Courier ServicesS.</p>
+      </div>
+      <div>
+        <strong data-i18n="company">Company</strong>
+        <div class="small">
+          Codedecode<br/>
+          Göteborg, Sweden
+        </div>
+      </div>
+      <div>
+        <strong data-i18n="contact">Contact</strong>
+        <div class="small">
+          info@codedecode.se<br/>
+waleedrasheed15@gmail.com 
+        </div>
+      </div>
+    </div>
+    <div class="divider" style="height:1px;background:rgba(148,163,184,.15);margin:18px 0;border-radius:1px"></div>
+    <div class="small">© <span id="year"></span> Codedecode. All rights reserved.</div>
+  </div>
+  <script>document.getElementById('year').textContent = new Date().getFullYear()</script>
+  <script src="assets/script.js"></script>
+</footer>
+
+</body></html>

@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8"/><meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <title>Contact — Codedecode</title>
+  <meta name="description" content="Contact Codedecode for IT resourcing, managed support, development, or courier staffing."/>
+  <link rel="stylesheet" href="assets/styles.css"/>
+</head><body>
+  
+<header class="header">
+  <div class="container nav">
+    <a class="brand" href="index.html"><img src="assets/img/logo.svg" alt="Codedecode logo"/><span>Codedecode</span></a>
+    <div class="lang">
+      <button type="button" data-lang="en" aria-label="Switch to English">EN</button>
+      <button type="button" data-lang="sv" aria-label="Byt till svenska">SV</button>
+      <button class="menu-btn" aria-label="Toggle menu">Menu</button>
+    </div>
+    <nav class="links" aria-label="Primary">
+      <a href="index.html" class="home ">Home</a>
+      <a href="about.html" class="about ">About</a>
+      <a href="blog.html" class="blog ">Blog</a>
+      <a href="contact.html" class="contact active">Contact</a>
+    </nav>
+  </div>
+</header>
+
+  <main class="container">
+    <section class="section">
+      <h1 data-i18n="contact_h1">Contact Us</h1>
+      <p class="muted" data-i18n="contact_p">Tell us what you need and we’ll respond with profiles, availability, and a quote.</p>
+      <form id="contact-form" class="form" action="#" method="post">
+        <input class="input" type="text" name="name" data-ph="form_name" placeholder="Your name" required/>
+        <input class="input" type="email" name="email" data-ph="form_email" placeholder="Your email" required/>
+        <input class="input" type="tel" name="phone" data-ph="form_phone" placeholder="Phone (optional)"/>
+        <select class="input" name="service" required>
+          <option value="" data-i18n="form_service">Select a service</option>
+          <option data-i18n="form_svc1">IT Resourcing & Staffing</option>
+          <option data-i18n="form_svc2">Managed IT & Desktop Support</option>
+          <option data-i18n="form_svc3">Software Development & Integration</option>
+          <option data-i18n="form_svc4">Courier Workforce (Employees)</option>
+        </select>
+        <textarea class="textarea" name="message" data-ph="form_msg" placeholder="Describe your requirement" required></textarea>
+        <button class="button" type="submit" data-i18n="form_send">Send message</button>
+      </form>
+      <div class="divider" style="height:1px;background:rgba(148,163,184,.15);margin:18px 0;border-radius:1px"></div>
+      <div class="grid grid-3">
+        <div class="card"><div class="body"><h3>Email</h3><p>info@codedecode.nu</p></div></div>
+        
+        <div class="card"><div class="body"><h3>Address</h3><p>Göteborg, Sweden</p></div></div>
+      </div>
+    </section>
+  </main>
+  
+<footer class="footer">
+  <div class="container">
+    <div class="cols">
+      <div>
+        <div class="brand" style="margin-bottom:6px">
+          <img src="assets/img/logo.svg" alt="Codedecode logo"/><span>Codedecode</span>
+        </div>
+        <p class="small" data-i18n="footer_blurb">Swedish IT resourcing, support, and development. Courier Services.</p>
+      </div>
+      <div>
+        <strong data-i18n="company">Company</strong>
+        <div class="small">
+          Codedecode<br/>
+          Org no: 000000-0000<br/>
+          Stockholm, Sweden
+        </div>
+      </div>
+      <div>
+        <strong data-i18n="contact">Contact</strong>
+        <div class="small">
+          info@codedecode.se<br/>
+          +46 (0)70 000 00 00
+        </div>
+      </div>
+    </div>
+    <div class="divider" style="height:1px;background:rgba(148,163,184,.15);margin:18px 0;border-radius:1px"></div>
+    <div class="small">© <span id="year"></span> Codedecode. All rights reserved.</div>
+  </div>
+  <script>document.getElementById('year').textContent = new Date().getFullYear()</script>
+  <script src="assets/script.js"></script>
+</footer>
+
+</body></html>

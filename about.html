@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8"/><meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <title>About — Codedecode</title>
+  <meta name="description" content="About Codedecode: Swedish IT resourcing, managed support, development, and courier staffing."/>
+  <link rel="stylesheet" href="assets/styles.css"/>
+</head><body>
+  
+<header class="header">
+  <div class="container nav">
+    <a class="brand" href="index.html"><img src="assets/img/logo.svg" alt="Codedecode logo"/><span>Codedecode</span></a>
+    <div class="lang">
+      <button type="button" data-lang="en" aria-label="Switch to English">EN</button>
+      <button type="button" data-lang="sv" aria-label="Byt till svenska">SV</button>
+      <button class="menu-btn" aria-label="Toggle menu">Menu</button>
+    </div>
+    <nav class="links" aria-label="Primary">
+      <a href="index.html" class="home ">Home</a>
+      <a href="about.html" class="about active">About</a>
+      <a href="blog.html" class="blog ">Blog</a>
+      <a href="contact.html" class="contact ">Contact</a>
+    </nav>
+  </div>
+</header>
+
+  <main class="container">
+    <section class="section hero" style="grid-template-columns:1fr 1fr">
+      <div><h1 data-i18n="nav_about">About</h1>
+        <p class="muted">Codedecode provides IT resources and managed support to enterprises and MSPs. We also help logistics partners by supplying on-demand courier staff.</p></div>
+      <div><img src="assets/img/team.svg" alt="Team"/></div>
+    </section>
+    <section class="section">
+      <h2 data-i18n="services">Services</h2>
+      <div class="grid grid-3">
+        <div class="card"><div class="body"><h3 data-i18n="svc_resourcing">IT Resourcing & Staffing</h3><p data-i18n="svc_resourcing_desc">On-site and remote consultants for support, deskside, DC, and field engineering.</p></div></div>
+        <div class="card"><div class="body"><h3 data-i18n="svc_managed">Managed IT & Desktop Support</h3><p data-i18n="svc_managed_desc">SLA-backed incident handling and dispatch for Sweden-wide coverage.</p></div></div>
+        <div class="card"><div class="body"><h3 data-i18n="svc_courier">Courier Workforce (Employees)</h3><p data-i18n="svc_courier_desc">Drivers and delivery staff to scale your routes and coverage.</p></div></div>
+      </div>
+      <div class="divider" style="height:1px;background:rgba(148,163,184,.15);margin:18px 0;border-radius:1px"></div>
+      <h2>How we work</h2>
+      <p class="muted">Clear scopes, transparent rates, and committed SLAs. We match the right profiles, confirm availability, and keep communication tight from start to finish.</p>
+    </section>
+  </main>
+  
+<footer class="footer">
+  <div class="container">
+    <div class="cols">
+      <div>
+        <div class="brand" style="margin-bottom:6px">
+          <img src="assets/img/logo.svg" alt="Codedecode logo"/><span>Codedecode</span>
+        </div>
+        <p class="small" data-i18n="footer_blurb">Swedish IT resourcing, support, and development. Courier staffing on demand.</p>
+      </div>
+      <div>
+        <strong data-i18n="company">Company</strong>
+        <div class="small">
+          Codedecode<br/>
+          Org no: 000000-0000<br/>
+          Stockholm, Sweden
+        </div>
+      </div>
+      <div>
+        <strong data-i18n="contact">Contact</strong>
+        <div class="small">
+          info@codedecode.se<br/>
+          +46 (0)70 000 00 00
+        </div>
+      </div>
+    </div>
+    <div class="divider" style="height:1px;background:rgba(148,163,184,.15);margin:18px 0;border-radius:1px"></div>
+    <div class="small">© <span id="year"></span> Codedecode. All rights reserved.</div>
+  </div>
+  <script>document.getElementById('year').textContent = new Date().getFullYear()</script>
+  <script src="assets/script.js"></script>
+</footer>
+
+</body></html>

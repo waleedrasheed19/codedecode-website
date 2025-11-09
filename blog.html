@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8"/><meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <title>Blog — Codedecode</title>
+  <meta name="description" content="Codedecode blog: insights on IT resourcing, managed support, development, and courier staffing."/>
+  <link rel="stylesheet" href="assets/styles.css"/>
+</head><body>
+  
+<header class="header">
+  <div class="container nav">
+    <a class="brand" href="index.html"><img src="assets/img/logo.svg" alt="Codedecode logo"/><span>Codedecode</span></a>
+    <div class="lang">
+      <button type="button" data-lang="en" aria-label="Switch to English">EN</button>
+      <button type="button" data-lang="sv" aria-label="Byt till svenska">SV</button>
+      <button class="menu-btn" aria-label="Toggle menu">Menu</button>
+    </div>
+    <nav class="links" aria-label="Primary">
+      <a href="index.html" class="home ">Home</a>
+      <a href="about.html" class="about ">About</a>
+      <a href="blog.html" class="blog active">Blog</a>
+      <a href="contact.html" class="contact ">Contact</a>
+    </nav>
+  </div>
+</header>
+
+  <main class="container">
+    <section class="section">
+      <h1 data-i18n="blog_title">Insights & Updates</h1>
+      <p class="muted" data-i18n="blog_intro">Professional tips and stories from the field.</p>
+      <div class="blog-list">
+        <article class="card"><img src="assets/img/blog1.svg" alt="Dependable IT operations"/>
+          <div class="body"><h3><a href="post-ops.html">Dependable IT Ops: SLAs That Actually Work</a></h3>
+          <div class="post-meta">IT Support • 5 min read</div>
+          <p class="muted">Practical SLA patterns we use to keep response and resolution times predictable.</p></div></article>
+        <article class="card"><img src="assets/img/blog2.svg" alt="Staffing the right skillset"/>
+          <div class="body"><h3><a href="post-staffing.html">Resourcing Right: Matching Skills to Tickets</a></h3>
+          <div class="post-meta">Resourcing • 6 min read</div>
+          <p class="muted">From L1–L3 to field engineers: how to map demand and avoid bottlenecks.</p></div></article>
+        <article class="card"><img src="assets/img/blog3.svg" alt="Modern web app delivery"/>
+          <div class="body"><h3><a href="post-dev.html">Modern App Delivery—From MVP to Maintainable</a></h3>
+          <div class="post-meta">Development • 7 min read</div>
+          <p class="muted">Ship small, measure, iterate. Tooling and practices that keep costs sane.</p></div></article>
+      </div>
+    </section>
+  </main>
+  
+<footer class="footer">
+  <div class="container">
+    <div class="cols">
+      <div>
+        <div class="brand" style="margin-bottom:6px">
+          <img src="assets/img/logo.svg" alt="Codedecode logo"/><span>Codedecode</span>
+        </div>
+        <p class="small" data-i18n="footer_blurb">Swedish IT resourcing, support, and development. Courier staffing on demand.</p>
+      </div>
+      <div>
+        <strong data-i18n="company">Company</strong>
+        <div class="small">
+          Codedecode<br/>
+          Org no: 000000-0000<br/>
+          Stockholm, Sweden
+        </div>
+      </div>
+      <div>
+        <strong data-i18n="contact">Contact</strong>
+        <div class="small">
+          info@codedecode.se<br/>
+          +46 (0)70 000 00 00
+        </div>
+      </div>
+    </div>
+    <div class="divider" style="height:1px;background:rgba(148,163,184,.15);margin:18px 0;border-radius:1px"></div>
+    <div class="small">© <span id="year"></span> Codedecode. All rights reserved.</div>
+  </div>
+  <script>document.getElementById('year').textContent = new Date().getFullYear()</script>
+  <script src="assets/script.js"></script>
+</footer>
+
+</body></html>
