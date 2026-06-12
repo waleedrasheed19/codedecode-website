@@ -1,116 +1,116 @@
-<!DOCTYPE html>
-<html lang="en"><head>
-  <meta charset="utf-8"/><meta name="viewport" content="width=device-width, initial-scale=1"/>
-  <title>Codedecode — IT Resourcing & Support in Sweden</title>
-  <meta name="description" content="Codedecode provides vetted IT resources, managed support, software development, and Logistic Services in Sweden."/>
-  <link rel="stylesheet" href="assets/styles.css"/>
-</head><body>
-  
-<header class="header">
-  <div class="container nav">
-    <a class="brand" href="index.html"><img src="assets/img/logo.svg" alt="Codedecode logo"/><span>Codedecode</span></a>
-    <div class="lang">
-      <button type="button" data-lang="en" aria-label="Switch to English">EN</button>
-      <button type="button" data-lang="sv" aria-label="Byt till svenska">SV</button>
-      <button class="menu-btn" aria-label="Toggle menu">Menu</button>
-    </div>
-    <nav class="links" aria-label="Primary">
-      <a href="index.html" class="home active">Home</a>
-      <a href="about.html" class="about ">About</a>
-      <a href="blog.html" class="blog ">Blog</a>
-      <a href="contact.html" class="contact ">Contact</a>
-    </nav>
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Codedecode - IT Support, Field Engineering and Technical Resources</title>
+  <meta name="description" content="Codedecode provides IT support, field engineering, dispatch services and technical resource solutions across Sweden, with Nordic and EU project capability.">
+  <style>
+    :root { --navy:#0B1F3A; --blue:#1769AA; --teal:#00A6A6; --light:#F3F6F9; --text:#344054; }
+    body { margin:0; font-family: Arial, Helvetica, sans-serif; color:var(--text); line-height:1.6; }
+    header { background:linear-gradient(135deg,var(--navy),var(--blue)); color:white; padding:70px 8%; }
+    header h1 { font-size:44px; margin:0 0 12px; letter-spacing:.5px; }
+    header p { font-size:20px; max-width:900px; margin:0 0 22px; color:#d6e9ff; }
+    .cta { display:inline-block; background:var(--teal); color:white; padding:12px 20px; border-radius:8px; text-decoration:none; font-weight:bold; }
+    section { padding:48px 8%; }
+    section:nth-child(even) { background:var(--light); }
+    h2 { color:var(--navy); font-size:30px; margin:0 0 16px; }
+    h3 { color:var(--blue); margin:20px 0 8px; }
+    .grid { display:grid; grid-template-columns: repeat(auto-fit,minmax(240px,1fr)); gap:18px; }
+    .card { background:white; border:1px solid #d0d5dd; border-radius:12px; padding:20px; box-shadow:0 4px 14px rgba(11,31,58,.05); }
+    .card h3 { margin-top:0; color:var(--navy); }
+    .badges { display:grid; grid-template-columns: repeat(auto-fit,minmax(180px,1fr)); gap:12px; margin-top:24px; }
+    .badge { border:1px solid #b9d7f5; border-radius:10px; padding:14px; background:#f8fbff; }
+    .badge strong { display:block; color:var(--blue); font-size:20px; }
+    .process { display:grid; grid-template-columns: repeat(auto-fit,minmax(140px,1fr)); gap:12px; counter-reset:step; }
+    .process div { background:white; border:1px solid #d0d5dd; border-radius:10px; padding:16px; }
+    .process div:before { counter-increment:step; content:counter(step); display:inline-grid; place-items:center; width:28px; height:28px; border-radius:50%; background:var(--blue); color:white; font-weight:bold; margin-bottom:8px; }
+    table { width:100%; border-collapse:collapse; background:white; border-radius:12px; overflow:hidden; }
+    th, td { border:1px solid #d0d5dd; padding:12px; text-align:left; }
+    th { background:var(--navy); color:white; }
+    footer { background:var(--navy); color:white; padding:30px 8%; }
+    footer a { color:#d6e9ff; }
+  </style>
+</head>
+<body>
+<header>
+  <h1>Codedecode</h1>
+  <p>Reliable IT support, field engineering and technical resource solutions across Sweden.</p>
+  <p>Since February 2020, Codedecode has supported organizations with dispatch tickets, onsite technical support, remote assistance, recruitment coordination and long-term project resources.</p>
+  <a class="cta" href="#contact">Contact Codedecode</a>
+  <div class="badges">
+    <div class="badge"><span>Operating since</span><strong>February 2020</strong></div>
+    <div class="badge"><span>Main coverage</span><strong>Sweden</strong></div>
+    <div class="badge"><span>Support model</span><strong>Dispatch + projects</strong></div>
+    <div class="badge"><span>Website</span><strong>codedecode.nu</strong></div>
   </div>
 </header>
-
-  <main class="container">
-    <section class="hero">
-      <div>
-        <h1 data-i18n="hero_title">Swedish IT Resourcing & Support</h1>
-        <p class="muted" data-i18n="hero_desc">We provide vetted IT resources, managed support, and development services to keep your business moving. We can also supply courier staff on demand.</p>
-        <div class="badges">
-          <span class="badge" data-i18n="badge_sweden">Registered in Sweden</span>
-          <span class="badge" data-i18n="badge_network">Nationwide IT Network</span>
-          <span class="badge" data-i18n="badge_support">On-call Support</span>
-        </div>
-        <div class="cta">
-          <a class="button" href="contact.html" data-i18n="cta_quote">Request Talent</a>
-          <a class="button secondary" href="about.html" data-i18n="cta_learn">What We Do</a>
-        </div>
-      </div>
-      <div><img src="assets/img/hero.svg" alt="IT resourcing & support illustration"/></div>
-    </section>
-
-    <section class="section">
-      <h2 data-i18n="services">Services</h2>
-      <p class="muted" data-i18n="services_sub">Specialists on demand—when and where you need them.</p>
-      <div class="grid grid-3" style="margin-top:10px">
-        <article class="card"><img src="assets/img/svc_resourcing.svg" alt="IT resourcing"/>
-          <div class="body"><h3 data-i18n="svc_resourcing">IT Resourcing & Staffing</h3>
-          <p data-i18n="svc_resourcing_desc">Contractors and teams for helpdesk, deskside, data center, and field engineering. Short or long-term assignments across Sweden.</p></div></article>
-        <article class="card"><img src="assets/img/svc_managed.svg" alt="Managed support"/>
-          <div class="body"><h3 data-i18n="svc_managed">Managed IT & Desktop Support</h3>
-          <p data-i18n="svc_managed_desc">SLAs, incident handling, device lifecycle, and on-site dispatch. Keep downtime low and users happy.</p></div></article>
-        <article class="card"><img src="assets/img/svc_dev.svg" alt="Development"/>
-          <div class="body"><h3 data-i18n="svc_dev">Software Development & Integration</h3>
-          <p data-i18n="svc_dev_desc">Web/mobile apps, APIs, and automations tailored to your operations.</p></div></article>
-        <article class="card"><img src="assets/img/svc_courier_staff.svg" alt="Courier workforce"/>
-          <div class="body"><h3 data-i18n="svc_courier">Courier Workforce (Employees)</h3>
-          <p data-i18n="svc_courier_desc">We can provide drivers and delivery staff for your logistics operations, flexible scheduling and coverage.</p></div></article>
-      </div>
-    </section>
-
-    <section class="section">
-      <h2 data-i18n="clients">Trusted by teams like</h2>
-      <div class="clients">
-        <img src="assets/img/logos/NorthTech.svg" alt="NorthTech logo"/>
-        <img src="assets/img/logos/Skandia IT.svg" alt="Skandia IT logo"/>
-        <img src="assets/img/logos/BlueCargo.svg" alt="BlueCargo logo"/>
-        <img src="assets/img/logos/NordicLabs.svg" alt="NordicLabs logo"/>
-        <img src="assets/img/logos/Datapoint.svg" alt="Datapoint logo"/>
-        <img src="assets/img/logos/RapidRoute.svg" alt="RapidRoute logo"/>
-      </div>
-    </section>
-
-    <section class="section">
-      <h2 data-i18n="why">Why Codedecode</h2>
-      <div class="grid grid-3">
-        <div class="card"><div class="body"><h3 data-i18n="why_1h">Vetted talent</h3><p class="muted" data-i18n="why_1p">We screen for skills, communication, and reliability.</p></div></div>
-        <div class="card"><div class="body"><h3 data-i18n="why_2h">Clear SLAs</h3><p class="muted" data-i18n="why_2p">Response targets and escalation paths you can rely on.</p></div></div>
-        <div class="card"><div class="body"><h3 data-i18n="why_3h">Security‑minded</h3><p class="muted" data-i18n="why_3p">From endpoints to apps—security by default.</p></div></div>
-      </div>
-    </section>
-  </main>
-  
-<footer class="footer">
-  <div class="container">
-    <div class="cols">
-      <div>
-        <div class="brand" style="margin-bottom:6px">
-          <img src="assets/img/logo.svg" alt="Codedecode logo"/><span>Codedecode</span>
-        </div>
-        <p class="small" data-i18n="footer_blurb">Swedish IT resourcing, support, and development. Logistic Services.</p>
-      </div>
-      <div>
-        <strong data-i18n="company">Company</strong>
-        <div class="small">
-          Codedecode<br/>
-          Göteborg, Sweden
-        </div>
-      </div>
-      <div>
-        <strong data-i18n="contact">Contact</strong>
-        <div class="small">
-          info@codedecode.se<br/>
-waleedrasheed15@gmail.com 
-        </div>
-      </div>
-    </div>
-    <div class="divider" style="height:1px;background:rgba(148,163,184,.15);margin:18px 0;border-radius:1px"></div>
-    <div class="small">© <span id="year"></span> Codedecode. All rights reserved.</div>
+<section id="services">
+  <h2>Services</h2>
+  <p>From desktop support and smart hands to network assistance, hardware support and project rollouts, Codedecode provides flexible technical services for companies that need reliable hands and clear communication.</p>
+  <div class="grid">
+    <div class="card"><h3>End-user support</h3><p>Desktop support, laptop setup, user troubleshooting, Microsoft 365 assistance and daily workplace IT issues.</p></div>
+    <div class="card"><h3>Field engineering</h3><p>Onsite technical work including hardware replacement, device setup, smart hands and site support.</p></div>
+    <div class="card"><h3>Network assistance</h3><p>LAN, Wi-Fi, VPN, cabling checks, connectivity troubleshooting and guided network tasks.</p></div>
+    <div class="card"><h3>Projects and rollouts</h3><p>Device deployment, migrations, office moves, refresh projects, asset audits and multi-site coordination.</p></div>
   </div>
-  <script>document.getElementById('year').textContent = new Date().getFullYear()</script>
-  <script src="assets/script.js"></script>
+</section>
+<section id="coverage">
+  <h2>Coverage</h2>
+  <p>Our main coverage area is Sweden. We can also support Nordic and EU requirements through planned project delivery, partner resources and subcontractor coordination.</p>
+  <div class="grid">
+    <div class="card"><h3>Sweden - main coverage</h3><p>Nationwide dispatch, onsite support, long-term projects and local resource coordination.</p></div>
+    <div class="card"><h3>Nordic countries</h3><p>Denmark, Norway, Finland and Iceland through planned project coverage and trusted resource networks.</p></div>
+    <div class="card"><h3>EU project capability</h3><p>European Union support through pre-agreed client requirements, partner technicians and subcontractor coordination.</p></div>
+  </div>
+</section>
+<section id="process">
+  <h2>Service Delivery Process</h2>
+  <div class="process">
+    <div><h3>Client request</h3><p>Ticket, project scope or resource need is received.</p></div>
+    <div><h3>Assessment</h3><p>Priority, location, skills and access requirements are checked.</p></div>
+    <div><h3>Resource match</h3><p>Qualified technician or team is assigned.</p></div>
+    <div><h3>Dispatch or remote</h3><p>Remote support or onsite attendance is scheduled.</p></div>
+    <div><h3>Resolution</h3><p>Work is completed with troubleshooting and testing.</p></div>
+    <div><h3>Closure</h3><p>Customer confirmation, reporting and ticket closure.</p></div>
+  </div>
+</section>
+<section id="recruitment">
+  <h2>Recruitment and Resource Management</h2>
+  <p>We help customers and partners source, coordinate and manage reliable technicians for both short-term dispatch work and long-term technology assignments.</p>
+  <div class="grid">
+    <div class="card"><h3>Reliable technicians</h3><p>Skills are matched to ticket scope, customer expectations and site requirements.</p></div>
+    <div class="card"><h3>Experienced coordination</h3><p>Technician scheduling, updates, documentation and escalation are handled professionally.</p></div>
+    <div class="card"><h3>Project staffing</h3><p>Resources can be sourced for dedicated onsite support, rollouts and long-term assignments.</p></div>
+  </div>
+</section>
+<section id="sla">
+  <h2>SLA and Support Model</h2>
+  <p>Codedecode supports clear SLA expectations. Response targets are agreed according to priority, location, support window, access requirements and contract scope.</p>
+  <table>
+    <tr><th>Priority</th><th>Example</th><th>Target response</th></tr>
+    <tr><td>Critical</td><td>Major business-impacting outage</td><td>Within 1 hour</td></tr>
+    <tr><td>High</td><td>Important user, site or service issue</td><td>Within 2 hours</td></tr>
+    <tr><td>Standard</td><td>Normal support request</td><td>Within 4 hours</td></tr>
+    <tr><td>Scheduled</td><td>Planned visit or project work</td><td>As agreed</td></tr>
+  </table>
+</section>
+<section id="travel">
+  <h2>Commercial and Travel Clarity</h2>
+  <p>Pricing can be agreed as dispatch tickets, hourly or day-rate support, dedicated resources, monthly project support or managed service arrangements. Travel compensation is calculated accurately and communicated clearly before work where possible.</p>
+</section>
+<section id="social">
+  <h2>Social Impact</h2>
+  <p>Codedecode is committed to creating local employment opportunities in Sweden by recruiting technical professionals, supporting junior technicians and helping local talent gain practical enterprise IT experience.</p>
+</section>
+<section id="contact">
+  <h2>Contact</h2>
+  <p>Need a technician, project resource or local vendor partner? Contact Codedecode to discuss your support requirement.</p>
+  <p><strong>Website:</strong> codedecode.nu<br><strong>Main coverage:</strong> Sweden<br><strong>Extended capability:</strong> Nordic countries and EU project coverage</p>
+</section>
+<footer>
+  <p><strong>Codedecode</strong> - IT support, field engineering and technical resource solutions.</p>
+  <p><a href="https://codedecode.nu">codedecode.nu</a></p>
 </footer>
-
-</body></html>
+</body>
+</html>
