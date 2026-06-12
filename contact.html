@@ -1,84 +1,200 @@
-<!DOCTYPE html>
-<html lang="en"><head>
-  <meta charset="utf-8"/><meta name="viewport" content="width=device-width, initial-scale=1"/>
-  <title>Contact — Codedecode</title>
-  <meta name="description" content="Contact Codedecode for IT resourcing, managed support, development, or Logistic Services."/>
-  <link rel="stylesheet" href="assets/styles.css"/>
-</head><body>
-  
-<header class="header">
-  <div class="container nav">
-    <a class="brand" href="index.html"><img src="assets/img/logo.svg" alt="Codedecode logo"/><span>Codedecode</span></a>
-    <div class="lang">
-      <button type="button" data-lang="en" aria-label="Switch to English">EN</button>
-      <button type="button" data-lang="sv" aria-label="Byt till svenska">SV</button>
-      <button class="menu-btn" aria-label="Toggle menu">Menu</button>
-    </div>
-    <nav class="links" aria-label="Primary">
-      <a href="index.html" class="home ">Home</a>
-      <a href="about.html" class="about ">About</a>
-      <a href="blog.html" class="blog ">Blog</a>
-      <a href="contact.html" class="contact active">Contact</a>
-    </nav>
-  </div>
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Contact Codedecode - IT Support and Field Engineering Sweden</title>
+  <meta name="description" content="Contact Codedecode for IT support, field engineering, dispatch tickets, onsite technical resources and project support across Sweden, Nordics and EU.">
+  <style>
+    :root { --navy:#0B1F3A; --blue:#1769AA; --teal:#00A6A6; --light:#F3F6F9; --text:#344054; }
+    * { box-sizing: border-box; }
+    body { margin:0; font-family: Arial, Helvetica, sans-serif; color:var(--text); line-height:1.6; background:#fff; }
+    header { background:linear-gradient(135deg,var(--navy),var(--blue)); color:white; padding:56px 8%; }
+    header h1 { font-size:42px; margin:0 0 12px; letter-spacing:.5px; }
+    header p { font-size:19px; max-width:900px; margin:0 0 18px; color:#d6e9ff; }
+    nav { margin-bottom:26px; }
+    nav a { color:#d6e9ff; text-decoration:none; font-weight:bold; margin-right:18px; }
+    nav a:hover { text-decoration:underline; }
+    section { padding:48px 8%; }
+    section:nth-child(even) { background:var(--light); }
+    h2 { color:var(--navy); font-size:30px; margin:0 0 16px; }
+    h3 { color:var(--blue); margin:20px 0 8px; }
+    .grid { display:grid; grid-template-columns: repeat(auto-fit,minmax(280px,1fr)); gap:22px; align-items:start; }
+    .card { background:white; border:1px solid #d0d5dd; border-radius:12px; padding:22px; box-shadow:0 4px 14px rgba(11,31,58,.05); }
+    .contact-list { margin:0; padding:0; list-style:none; }
+    .contact-list li { margin-bottom:12px; }
+    .contact-list strong { color:var(--navy); display:block; }
+    form { display:grid; gap:14px; }
+    label { font-weight:bold; color:var(--navy); }
+    input, select, textarea {
+      width:100%;
+      border:1px solid #cfd8e3;
+      border-radius:8px;
+      padding:12px;
+      font:inherit;
+      background:#fff;
+      color:var(--text);
+    }
+    textarea { min-height:150px; resize:vertical; }
+    button {
+      border:0;
+      border-radius:8px;
+      background:var(--teal);
+      color:#fff;
+      padding:13px 20px;
+      font-weight:bold;
+      font-size:16px;
+      cursor:pointer;
+    }
+    button:hover { opacity:.92; }
+    .note { font-size:14px; color:#667085; margin-top:6px; }
+    .success { display:none; background:#ecfdf3; border:1px solid #abefc6; color:#067647; border-radius:8px; padding:12px; }
+    .error { display:none; background:#fef3f2; border:1px solid #fecdca; color:#b42318; border-radius:8px; padding:12px; }
+    footer { background:var(--navy); color:white; padding:30px 8%; }
+    footer a { color:#d6e9ff; }
+  </style>
+</head>
+<body>
+<header>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="index.html#services">Services</a>
+    <a href="index.html#coverage">Coverage</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+  <h1>Contact Codedecode</h1>
+  <p>Need onsite IT support, field engineering, dispatch tickets or technical resources in Sweden, Nordics or EU? Send your requirement and we will get back to you.</p>
 </header>
 
-  <main class="container">
-    <section class="section">
-      <h1 data-i18n="contact_h1">Contact Us</h1>
-      <p class="muted" data-i18n="contact_p">Tell us what you need and we’ll respond with profiles, availability, and a quote.</p>
-      <form id="contact-form" class="form" action="#" method="post">
-        <input class="input" type="text" name="name" data-ph="form_name" placeholder="Your name" required/>
-        <input class="input" type="email" name="email" data-ph="form_email" placeholder="Your email" required/>
-        <input class="input" type="tel" name="phone" data-ph="form_phone" placeholder="Phone (optional)"/>
-        <select class="input" name="service" required>
-          <option value="" data-i18n="form_service">Select a service</option>
-          <option data-i18n="form_svc1">IT Resourcing & Staffing</option>
-          <option data-i18n="form_svc2">Managed IT & Desktop Support</option>
-          <option data-i18n="form_svc3">Software Development & Integration</option>
-          <option data-i18n="form_svc4">Courier Workforce (Employees)</option>
-        </select>
-        <textarea class="textarea" name="message" data-ph="form_msg" placeholder="Describe your requirement" required></textarea>
-        
+<section>
+  <div class="grid">
+    <div class="card">
+      <h2>Send a request</h2>
+      <p>Use this form for vendor partnerships, dispatch tickets, long-term projects, onsite support and resource requirements.</p>
+
+      <!-- IMPORTANT:
+        1. Create a free Formspree form at https://formspree.io/
+        2. Replace YOUR_FORM_ID below with your real Formspree ID.
+        Example: https://formspree.io/f/abcxyzpq
+      -->
+      <form id="contactForm" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+        <input type="hidden" name="_subject" value="New contact request from Codedecode website">
+
+        <div>
+          <label for="name">Full name *</label>
+          <input id="name" name="name" type="text" placeholder="Your full name" required>
+        </div>
+
+        <div>
+          <label for="company">Company</label>
+          <input id="company" name="company" type="text" placeholder="Company name">
+        </div>
+
+        <div>
+          <label for="email">Work email *</label>
+          <input id="email" name="email" type="email" placeholder="name@company.com" required>
+        </div>
+
+        <div>
+          <label for="phone">Phone / WhatsApp</label>
+          <input id="phone" name="phone" type="tel" placeholder="+46 ...">
+        </div>
+
+        <div>
+          <label for="service">Service required *</label>
+          <select id="service" name="service_required" required>
+            <option value="">Select service</option>
+            <option>Dispatch ticket / onsite visit</option>
+            <option>IT support engineer</option>
+            <option>Field engineering / smart hands</option>
+            <option>Network or connectivity support</option>
+            <option>Rollout / migration project</option>
+            <option>Long-term technical resource</option>
+            <option>Vendor partnership</option>
+            <option>Other</option>
+          </select>
+        </div>
+
+        <div>
+          <label for="location">Location / coverage area</label>
+          <input id="location" name="location" type="text" placeholder="Example: Gothenburg, Stockholm, Sweden, Nordics">
+        </div>
+
+        <div>
+          <label for="message">Message *</label>
+          <textarea id="message" name="message" placeholder="Please describe your requirement, site location, urgency, dates and required skills." required></textarea>
+        </div>
+
+        <button type="submit">Send request</button>
+        <p class="note">We normally respond by email. For urgent onsite work, include phone number and location.</p>
+
+        <div id="successMessage" class="success">Thank you. Your request has been sent successfully.</div>
+        <div id="errorMessage" class="error">Something went wrong. Please email us directly at info@codedecode.nu.</div>
       </form>
-      <div class="divider" style="height:1px;background:rgba(148,163,184,.15);margin:18px 0;border-radius:1px"></div>
-      <div class="grid grid-3">
-        <div class="card"><div class="body"><h3>Email</h3><p type="email">info@codedecode.nu</p></div></div>
-        
-        <div class="card"><div class="body"><h3>Address</h3><p>Göteborg, Sweden</p></div></div>
-      </div>
-    </section>
-  </main>
-  
-<footer class="footer">
-  <div class="container">
-    <div class="cols">
-      <div>
-        <div class="brand" style="margin-bottom:6px">
-          <img src="assets/img/logo.svg" alt="Codedecode logo"/><span>Codedecode</span>
-        </div>
-        <p class="small" data-i18n="footer_blurb">Swedish IT resourcing, support, and development. Logistic Services.</p>
-      </div>
-      <div>
-        <strong data-i18n="company">Company</strong>
-        <div class="small">
-          Codedecode<br/>
-          Göteborg, Sweden
-        </div>
-      </div>
-      <div>
-        <strong data-i18n="contact">Contact</strong>
-        <div class="small">
-          waleedrasheed15@gmail.com, <br/>
-          info@codedecode.se<br/>
-        </div>
-      </div>
     </div>
-    <div class="divider" style="height:1px;background:rgba(148,163,184,.15);margin:18px 0;border-radius:1px"></div>
-    <div class="small">© <span id="year"></span> Codedecode. All rights reserved.</div>
+
+    <div class="card">
+      <h2>Business details</h2>
+      <ul class="contact-list">
+        <li><strong>Email</strong><a href="mailto:info@codedecode.nu">info@codedecode.nu</a></li>
+        <li><strong>Website</strong><a href="https://codedecode.nu">codedecode.nu</a></li>
+        <li><strong>Main coverage</strong>Sweden</li>
+        <li><strong>Extended capability</strong>Nordic countries and EU project coverage</li>
+        <li><strong>Support model</strong>Dispatch tickets, onsite support, remote assistance and long-term projects</li>
+      </ul>
+
+      <h3>Best for</h3>
+      <p>MSPs, integrators, procurement teams and companies looking for reliable local technical support in Sweden.</p>
+
+      <h3>Response information</h3>
+      <p>Please include location, support window, SLA expectations, access requirements and any tools or certifications required.</p>
+    </div>
   </div>
-  <script>document.getElementById('year').textContent = new Date().getFullYear()</script>
-  <script src="assets/script.js"></script>
+</section>
+
+<footer>
+  <p><strong>Codedecode</strong> - IT support, field engineering and technical resource solutions.</p>
+  <p><a href="https://codedecode.nu">codedecode.nu</a> | <a href="mailto:info@codedecode.nu">info@codedecode.nu</a></p>
 </footer>
 
-</body></html>
+<script>
+  const form = document.getElementById('contactForm');
+  const successMessage = document.getElementById('successMessage');
+  const errorMessage = document.getElementById('errorMessage');
+
+  form.addEventListener('submit', async function (event) {
+    event.preventDefault();
+
+    successMessage.style.display = 'none';
+    errorMessage.style.display = 'none';
+
+    if (form.action.includes('YOUR_FORM_ID')) {
+      errorMessage.textContent = 'Form is not connected yet. Replace YOUR_FORM_ID with your real Formspree form ID.';
+      errorMessage.style.display = 'block';
+      return;
+    }
+
+    const formData = new FormData(form);
+
+    try {
+      const response = await fetch(form.action, {
+        method: 'POST',
+        body: formData,
+        headers: { 'Accept': 'application/json' }
+      });
+
+      if (response.ok) {
+        form.reset();
+        successMessage.style.display = 'block';
+      } else {
+        errorMessage.textContent = 'Message could not be sent. Please email us directly at info@codedecode.nu.';
+        errorMessage.style.display = 'block';
+      }
+    } catch (error) {
+      errorMessage.textContent = 'Network error. Please email us directly at info@codedecode.nu.';
+      errorMessage.style.display = 'block';
+    }
+  });
+</script>
+</body>
+</html>
